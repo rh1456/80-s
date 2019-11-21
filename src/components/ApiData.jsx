@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import MovieInfo from './Movie'
 import axios from 'axios'
+import eighties from './theeighties.jpeg'
 
 const GetAPIData = () => {
   const [movies, setMovies] = useState([])
@@ -19,6 +20,7 @@ const GetAPIData = () => {
       <body>
         <header>
           <h1>Best Movies From 1989</h1>
+          <img className="eightiesLogo" src={eighties} alt="logo" />
         </header>
         <main>
           <section className="movieLayout">
