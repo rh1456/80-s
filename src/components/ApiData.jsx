@@ -16,24 +16,26 @@ const GetAPIData = () => {
 
   return (
     <>
-      <header>
-        <h1>Best Movies From 1989</h1>
-      </header>
-      <main>
-        <h2>The Classics</h2>
-        <ul>
-          {movies.map(movie => {
-            return (
-              <MovieInfo
-                key={movie.id}
-                poster={movie.poster_path}
-                title={movie.title}
-                overview={movie.overview}
-              />
-            )
-          })}
-        </ul>
-      </main>
+      <body>
+        <header>
+          <h1>Best Movies From 1989</h1>
+        </header>
+        <main>
+          <section className="movieLayout">
+            {movies.map(movie => {
+              return (
+                <MovieInfo
+                  key={movie.id}
+                  poster={movie.poster_path}
+                  title={movie.title}
+                  overview={movie.overview}
+                  date={movie.release_date}
+                />
+              )
+            })}
+          </section>
+        </main>
+      </body>
     </>
   )
 }
